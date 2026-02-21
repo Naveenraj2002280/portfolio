@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naveenraj | Mobile Application Developer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --android-green: #3DDC84;
+            --flutter-blue: #02569B;
+            --ios-silver: #A2AAAD;
+            --kotlin-purple: #7F52FF;
+            --dark-bg: #080a0f;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+        body {
+            background-color: var(--dark-bg);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* --- Animated Background Elements --- */
+        .bg-glow {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 15% 15%, rgba(61, 220, 132, 0.12) 0%, transparent 35%),
+                radial-gradient(circle at 85% 85%, rgba(2, 86, 155, 0.15) 0%, transparent 35%);
+        }
+
+        /* --- Floating Mobile Background UI --- */
+        .mobile-wireframe {
+            position: absolute;
+            width: 250px;
+            height: 500px;
+            border: 4px solid rgba(255,255,255,0.05);
+            border-radius: 40px;
+            top: 10%;
+            right: 5%;
+            transform: rotate(15deg);
+            z-index: -1;
+            overflow: hidden;
+            opacity: 0.3;
+        }
+        .mobile-wireframe::after {
+            content: "";
+            position: absolute;
+            top: 10px; left: 50%; transform: translateX(-50%);
+            width: 60px; height: 5px; background: rgba(255,255,255,0.1); border-radius: 10px;
+        }
+
+        /* --- Hero Section --- */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .profile-card {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            padding: 60px 40px;
+            border-radius: 40px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-tag {
+            font-size: 1.1rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: var(--android-green);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .hero-name {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 800;
+            background: linear-gradient(to right, #fff, var(--android-green), var(--flutter-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+        }
+
+        /* --- Skill Bars (Updated Percentages) --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 50px 0;
+        }
+
+        .skill-item {
+            background: var(--glass);
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .bar-bg {
+            height: 8px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--android-green), var(--flutter-blue));
+            border-radius: 10px;
+            transition: width 2s cubic-bezier(0.1, 0, 0.2, 1);
+        }
+
+        /* --- Projects --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: left;
+            border-left: 6px solid var(--android-green);
+            padding-left: 20px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #11141b;
+            padding: 30px;
+            border-radius: 25px;
+            border: 1px solid #1f2937;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--flutter-blue);
+            box-shadow: 0 10px 30px rgba(2, 86, 155, 0.2);
+        }
+
+        .project-card h3 { color: var(--android-green); margin-bottom: 10px; }
+        
+        .tech-pill {
+            font-size: 0.7rem;
+            padding: 4px 10px;
+            background: rgba(61, 220, 132, 0.1);
+            color: var(--android-green);
+            border-radius: 50px;
+            margin-right: 5px;
+            border: 1px solid rgba(61, 220, 132, 0.3);
+        }
+
+        footer { text-align: center; padding: 60px; color: #444; border-top: 1px solid #111; }
+
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+    <div class="mobile-wireframe"></div>
+
+    <header>
+        <div class="profile-card">
+            <span class="hero-tag">Mobile Application Developer</span>
+            <h1 class="hero-name">Naveenraj</h1>
+            <p style="color: #94a3b8; max-width: 600px; margin: 0 auto;">
+                Crafting high-performance native and cross-platform experiences. 
+                Expert in <strong>Jetpack Compose</strong>, <strong>Flutter</strong>, and <strong>AWS Integration</strong>.
+            </p>
+            <div style="margin-top: 30px; display: flex; gap: 20px; justify-content: center;">
+                <a href="mailto:nraj5052@gmail.com" style="color: white; font-size: 1.5rem;"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/naveen-raj-492604197/" style="color: var(--android-green); font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Naveenraj2002280" style="color: var(--flutter-blue); font-size: 1.5rem;"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Technical Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <div class="skill-header"><span>Kotlin (Android Native)</span><span>85%</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width: 85%;"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-header"><span>Flutter & Dart</span><span>80%</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width: 80%;"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-header"><span>Mobile Architecture (MVVM/Clean)</span><span>75%</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width: 75%;"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-header"><span>Cloud & AWS (S3/Bedrock)</span><span>70%</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width: 70%;"></div></div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Pop - AI Document</h3>
+                <p>Family document management with AWS Bedrock AI and Native Camera integration.</p>
+                <div style="margin-top:15px;">
+                    <span class="tech-pill">Flutter</span> <span class="tech-pill">AWS</span> <span class="tech-pill">Python</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Ward Supervisor</h3>
+                <p>Enterprise logistics tracker migrated to Android Native via Jetpack Compose.</p>
+                <div style="margin-top:15px;">
+                    <span class="tech-pill">Kotlin</span> <span class="tech-pill">Compose</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Herse - WearOS</h3>
+                <p>Pulse detection and fitness tracking specifically for Google Pixel Watch.</p>
+                <div style="margin-top:15px;">
+                    <span class="tech-pill">Kotlin</span> <span class="tech-pill">WearOS</span> <span class="tech-pill">Sensors</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Nextcare Native</h3>
+                <p>Complete healthcare booking app with PHP middleware and location services.</p>
+                <div style="margin-top:15px;">
+                    <span class="tech-pill">Kotlin</span> <span class="tech-pill">PHP</span> <span class="tech-pill">MVVM</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Internal UI Library</h3>
+                <p>Core component library with custom grids and unit testing via Kotlin Mock.</p>
+                <div style="margin-top:15px;">
+                    <span class="tech-pill">Testing</span> <span class="tech-pill">Jetpack</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Amiztam E-Commerce</h3>
+                <p>Organic agro-store with Hybrid Login and Biometric Security integration.</p>
+                <div style="margin-top:15px;">
+                    <span class="tech-pill">JavaScript</span> <span class="tech-pill">Firebase</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Naveenraj | Engineering Graduate (8.7 CGPA)</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Built with Mobile Development Standards • 2026</p>
+    </footer>
+
+</body>
+</html>
