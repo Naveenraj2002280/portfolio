@@ -3,280 +3,304 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naveenraj | Mobile Application Developer</title>
+    <title>Naveenraj | Senior AI Systems & Mobile Full-Stack Engineer</title>
+    <!-- Font Awesome Icons -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --android-green: #3DDC84;
-            --flutter-blue: #02569B;
-            --ios-silver: #A2AAAD;
-            --kotlin-purple: #7F52FF;
-            --dark-bg: #080a0f;
-            --glass: rgba(255, 255, 255, 0.03);
-            --glass-border: rgba(255, 255, 255, 0.1);
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-
-        body {
-            background-color: var(--dark-bg);
-            color: white;
-            overflow-x: hidden;
-        }
-
-        /* --- Animated Background Elements --- */
-        .bg-glow {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            z-index: -1;
-            background: 
-                radial-gradient(circle at 15% 15%, rgba(61, 220, 132, 0.12) 0%, transparent 35%),
-                radial-gradient(circle at 85% 85%, rgba(2, 86, 155, 0.15) 0%, transparent 35%);
-        }
-
-        /* --- Floating Mobile Background UI --- */
-        .mobile-wireframe {
-            position: absolute;
-            width: 250px;
-            height: 500px;
-            border: 4px solid rgba(255,255,255,0.05);
-            border-radius: 40px;
-            top: 10%;
-            right: 5%;
-            transform: rotate(15deg);
-            z-index: -1;
-            overflow: hidden;
-            opacity: 0.3;
-        }
-        .mobile-wireframe::after {
-            content: "";
-            position: absolute;
-            top: 10px; left: 50%; transform: translateX(-50%);
-            width: 60px; height: 5px; background: rgba(255,255,255,0.1); border-radius: 10px;
-        }
-
-        /* --- Hero Section --- */
-        header {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-            position: relative;
-        }
-
-        .profile-card {
-            background: var(--glass);
-            backdrop-filter: blur(15px);
-            padding: 60px 40px;
-            border-radius: 40px;
-            border: 1px solid var(--glass-border);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero-tag {
-            font-size: 1.1rem;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            font-weight: 600;
-            color: var(--android-green);
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .hero-name {
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
-            font-weight: 800;
-            background: linear-gradient(to right, #fff, var(--android-green), var(--flutter-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 15px;
-        }
-
-        /* --- Skill Bars (Updated Percentages) --- */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin: 50px 0;
-        }
-
-        .skill-item {
-            background: var(--glass);
-            padding: 20px;
-            border-radius: 20px;
-            border: 1px solid var(--glass-border);
-        }
-
-        .skill-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-            font-weight: 500;
-        }
-
-        .bar-bg {
-            height: 8px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .bar-fill {
-            height: 100%;
-            background: linear-gradient(90deg, var(--android-green), var(--flutter-blue));
-            border-radius: 10px;
-            transition: width 2s cubic-bezier(0.1, 0, 0.2, 1);
-        }
-
-        /* --- Projects --- */
-        .container { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
-        
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            text-align: left;
-            border-left: 6px solid var(--android-green);
-            padding-left: 20px;
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .project-card {
-            background: #11141b;
-            padding: 30px;
-            border-radius: 25px;
-            border: 1px solid #1f2937;
-            transition: 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--flutter-blue);
-            box-shadow: 0 10px 30px rgba(2, 86, 155, 0.2);
-        }
-
-        .project-card h3 { color: var(--android-green); margin-bottom: 10px; }
-        
-        .tech-pill {
-            font-size: 0.7rem;
-            padding: 4px 10px;
-            background: rgba(61, 220, 132, 0.1);
-            color: var(--android-green);
-            border-radius: 50px;
-            margin-right: 5px;
-            border: 1px solid rgba(61, 220, 132, 0.3);
-        }
-
-        footer { text-align: center; padding: 60px; color: #444; border-top: 1px solid #111; }
-
-    </style>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <!-- Animated Cosmic & Neural Layers -->
     <div class="bg-glow"></div>
-    <div class="mobile-wireframe"></div>
+    <div class="neural-wireframe"></div>
 
-    <header>
-        <div class="profile-card">
-            <span class="hero-tag">Mobile Application Developer</span>
-            <h1 class="hero-name">Naveenraj</h1>
-            <p style="color: #94a3b8; max-width: 600px; margin: 0 auto;">
-                Crafting high-performance native and cross-platform experiences. 
-                Expert in <strong>Jetpack Compose</strong>, <strong>Flutter</strong>, and <strong>AWS Integration</strong>.
-            </p>
-            <div style="margin-top: 30px; display: flex; gap: 20px; justify-content: center;">
-                <a href="mailto:nraj5052@gmail.com" style="color: white; font-size: 1.5rem;"><i class="fas fa-envelope"></i></a>
-                <a href="https://linkedin.com/in/naveen-raj-492604197/" style="color: var(--android-green); font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/Naveenraj2002280" style="color: var(--flutter-blue); font-size: 1.5rem;"><i class="fab fa-github"></i></a>
+    <!-- Transparent Sticky Navbar Layout -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">N<span>.</span></a>
+            <div class="nav-links">
+                <a href="#about"><i class="fa-solid fa-user-astronaut"></i> About</a>
+                <a href="#skills"><i class="fa-solid fa-layer-group"></i> Matrix</a>
+                <a href="#experience"><i class="fa-solid fa-timeline"></i> Timeline</a>
+                <a href="#projects"><i class="fa-solid fa-cubes"></i> Production Systems</a>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <div class="container">
-        <h2 class="section-title">Technical Expertise</h2>
-        <div class="skills-grid">
-            <div class="skill-item">
-                <div class="skill-header"><span>Kotlin (Android Native)</span><span>85%</span></div>
-                <div class="bar-bg"><div class="bar-fill" style="width: 85%;"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-header"><span>Flutter & Dart</span><span>80%</span></div>
-                <div class="bar-bg"><div class="bar-fill" style="width: 80%;"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-header"><span>Mobile Architecture (MVVM/Clean)</span><span>75%</span></div>
-                <div class="bar-bg"><div class="bar-fill" style="width: 75%;"></div></div>
-            </div>
-            <div class="skill-item">
-                <div class="skill-header"><span>Cloud & AWS (S3/Bedrock)</span><span>70%</span></div>
-                <div class="bar-bg"><div class="bar-fill" style="width: 70%;"></div></div>
-            </div>
-        </div>
-
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Pop - AI Document</h3>
-                <p>Family document management with AWS Bedrock AI and Native Camera integration.</p>
-                <div style="margin-top:15px;">
-                    <span class="tech-pill">Flutter</span> <span class="tech-pill">AWS</span> <span class="tech-pill">Python</span>
+    <div class="main-layout">
+        <!-- Hero Fixed Left Profile Container -->
+        <header id="about" class="hero-section">
+            <div class="profile-card">
+                <span class="hero-tag">AI Systems &amp; Mobile Full-Stack Engineer</span>
+                <h1 class="hero-name">Naveenraj</h1>
+                <p class="hero-description">
+                    Bridging elite client-side experiences with high-performance intelligent backend systems[cite: 1, 2, 3]. Over 3 years of engineering experience optimizing cross-platform <strong>Flutter</strong> and native <strong>Jetpack Compose</strong> apps, seamlessly backing them with <strong>Databricks big data pipelines</strong>, custom <strong>RAG engines</strong>, and multi-agent systems[cite: 1, 2, 3].
+                </p>
+                <div class="social-icons">
+                    <a href="mailto:nraj5052@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/naveen-raj-492604197/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Naveenraj2002280" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+                <div class="edu-badge">
+                    <i class="fa-solid fa-graduation-cap"></i> B.E. Electrical &amp; Electronics Engineering &bull; 8.7 CGPA[cite: 2, 3]
                 </div>
             </div>
+        </header>
 
-            <div class="project-card">
-                <h3>Ward Supervisor</h3>
-                <p>Enterprise logistics tracker migrated to Android Native via Jetpack Compose.</p>
-                <div style="margin-top:15px;">
-                    <span class="tech-pill">Kotlin</span> <span class="tech-pill">Compose</span>
+        <main class="content-space">
+            <!-- Full Technical Competency Matrix Section -->
+            <section id="skills" class="section-container">
+                <h2 class="section-title">Technical Expertise Matrix</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span><i class="fab fa-android" style="color: var(--android-green);"></i> Native Android (Kotlin &amp; Jetpack Compose)</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="bar-bg"><div class="bar-fill" style="width: 95%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span><i class="fa-solid fa-paper-plane" style="color: var(--flutter-blue);"></i> Cross-Platform Mobile (Flutter &amp; Dart)</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="bar-bg"><div class="bar-fill" style="width: 92%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span><i class="fa-solid fa-brain" style="color: #ff007f;"></i> Generative AI Orchestration &amp; RAG Pipelines</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="bar-bg"><div class="bar-fill" style="width: 90%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span><i class="fa-solid fa-database" style="color: #ffaa00;"></i> Big Data Infrastructure (Databricks / PySpark / Delta Lake)</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="bar-bg"><div class="bar-fill" style="width: 88%;"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span><i class="fa-brands fa-python" style="color: var(--kotlin-purple);"></i> Full-Stack Engineering (FastAPI / Flask / Node.js / PHP)</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="bar-bg"><div class="bar-fill" style="width: 90%;"></div></div>
+                    </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="project-card">
-                <h3>Herse - WearOS</h3>
-                <p>Pulse detection and fitness tracking specifically for Google Pixel Watch.</p>
-                <div style="margin-top:15px;">
-                    <span class="tech-pill">Kotlin</span> <span class="tech-pill">WearOS</span> <span class="tech-pill">Sensors</span>
-                </div>
-            </div>
+            <!-- Experience Timeline Section -->
+            <section id="experience" class="section-container">
+                <h2 class="section-title">Professional Experience Timeline</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <h3>Mobile Full-Stack &amp; AI Systems Engineer</h3>
+                            <span class="timeline-date">Jan 2024 – Present</span>[cite: 2, 3]
+                        </div>
+                        <h4 class="timeline-company">Information Technology &amp; Software Services Domain</h4>
+                        <ul class="timeline-bullets">
+                            <li>Architect and develop highly responsive native mobile software using Kotlin (Jetpack Compose) and cross-platform Flutter application matrices[cite: 2, 3].</li>
+                            <li>Design and deploy cloud-native microservices, automated Terraform environments, and multi-tenant big data pipelines within Databricks layers[cite: 1, 2].</li>
+                            <li>Successfully modernize obsolete corporate ecosystems by converting manual infrastructures into automated, AI-driven backend agent models[cite: 1, 2].</li>
+                            <li>Establish standardized client-side secure API layers, custom UI library structures, and comprehensive automated test sets across engineering squads[cite: 2, 3].</li>
+                        </ul>
+                    </div>
 
-            <div class="project-card">
-                <h3>Nextcare Native</h3>
-                <p>Complete healthcare booking app with PHP middleware and location services.</p>
-                <div style="margin-top:15px;">
-                    <span class="tech-pill">Kotlin</span> <span class="tech-pill">PHP</span> <span class="tech-pill">MVVM</span>
-                </div>
-            </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <h3>Junior Android Developer</h3>
+                            <span class="timeline-date">Sep 2023 – Feb 2024</span>[cite: 2, 3]
+                        </div>
+                        <h4 class="timeline-company">Information Technology &amp; Software Services Domain</h4>
+                        <ul class="timeline-bullets">
+                            <li>Constructed comprehensive business software solutions deploying Jetpack Compose layouts tied to MVVM architectural design flows[cite: 2, 3].</li>
+                            <li>Collaborated directly on heavy-traffic slot-booking components and structured continuous secure connection loops with third-party remote APIs[cite: 2, 3].</li>
+                            <li>Developed reliable PHP-based middleware servers to cleanly synchronize legacy backends into modern mobile front-end containers[cite: 2, 3].</li>
+                        </ul>
+                    </div>
 
-            <div class="project-card">
-                <h3>Internal UI Library</h3>
-                <p>Core component library with custom grids and unit testing via Kotlin Mock.</p>
-                <div style="margin-top:15px;">
-                    <span class="tech-pill">Testing</span> <span class="tech-pill">Jetpack</span>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-header">
+                            <h3>Mobile App Engineering Intern</h3>
+                            <span class="timeline-date">Jul 2023 – Sep 2023</span>[cite: 2, 3]
+                        </div>
+                        <h4 class="timeline-company">Information Technology &amp; Software Services Domain</h4>
+                        <ul class="timeline-bullets">
+                            <li>Completed intensive native mobile code training highlighting activity lifecycles, intent management, and underlying display view stacks[cite: 2, 3].</li>
+                            <li>Gained foundational full-stack expertise across HTML5, CSS3, and JavaScript, building components for fluid hybrid WebView systems[cite: 2, 3].</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="project-card">
-                <h3>Amiztam E-Commerce</h3>
-                <p>Organic agro-store with Hybrid Login and Biometric Security integration.</p>
-                <div style="margin-top:15px;">
-                    <span class="tech-pill">JavaScript</span> <span class="tech-pill">Firebase</span>
+            <!-- Complete Project Grid Matrix (Mobile + AI Integrated) -->
+            <section id="projects" class="section-container">
+                <h2 class="section-title">Featured Production Systems</h2>
+                <div class="project-grid">
+                    
+                    <!-- Project 1: Current Core AI/BI Project -->
+                    <div class="project-card active-project">
+                        <div class="project-info">
+                            <div class="project-tag-line"><span class="live-pulse"></span> Active Pipeline Engine</div>
+                            <h3>AI/BI Querying Engine &amp; Predictive Forecasting Model</h3>
+                            <span class="project-date">Big Data Systems &bull; 2 Months</span>
+                            <p>Engineered an end-to-end data intelligence solution to resolve deep bottlenecks in querying unstructured retail data. Provisioned a Databricks Genie Space converting natural language queries into valid SQL expressions across massive schemas. Developed a sales forecasting model tracked, versioned, and registered via MLflow workflows.</p>
+                        </div>
+                        <div class="tech-container">
+                            <span class="tech-pill">Databricks Genie</span>
+                            <span class="tech-pill">AI/BI Dashboards</span>
+                            <span class="tech-pill">MLflow</span>
+                            <span class="tech-pill">PySpark</span>
+                            <span class="tech-pill">Delta Lake</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Platform Orchestrator -->
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3>Platform Orchestrator – Multi-Cloud Chatbot Automation</h3>
+                            <span class="project-date">DevOps &amp; AI Framework &bull; 2 Months</span>
+                            <p>Built an enterprise-grade automation engine reducing multi-cloud chatbot infrastructure deployments from days to 5 minutes. Engineered an async dual-trigger loop using AWS Lambda and SQS FIFO queues to handle scale webhooks without timeouts, and applied a strict Platform Adapter Pattern separating core logic from API variances.</p>
+                        </div>
+                        <div class="tech-container">
+                            <span class="tech-pill">FastAPI</span>
+                            <span class="tech-pill">Terraform</span>
+                            <span class="tech-pill">AWS Lambda</span>
+                            <span class="tech-pill">SQS FIFO</span>
+                            <span class="tech-pill">Azure Functions</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Mobile Project 1 (Child Psychology) -->
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3>Cross-Platform Child Psychology E-Learning App</h3>
+                            <span class="project-date">Mobile &amp; AI Integration &bull; May 2025 – Aug 2025</span>[cite: 2, 3]
+                            <p>Architected a high-performance Android/iOS Flutter app featuring optimized streaming players and integrated e-commerce. Designed and embedded a secure client-side AI recommendation module to deliver personalized clinical course suggestions based on user profiles[cite: 2, 3].</p>
+                        </div>
+                        <div class="tech-container">
+                            <span class="tech-pill">Flutter</span>
+                            <span class="tech-pill">Dart</span>
+                            <span class="tech-pill">AI Core</span>
+                            <span class="tech-pill">Google Ads</span>[cite: 2, 3]
+                            <span class="tech-pill">E-Commerce</span>[cite: 2, 3]
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Service Management Platform -->
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3>AI-Powered Service Management Platform</h3>
+                            <span class="project-date">Enterprise SaaS Backend &bull; 10 Months</span>
+                            <p>Developed a massive multi-tenant microservices ecosystem consolidating 13+ operational modules. Features an AI-driven scheduling allocator combining AWS Bedrock project estimations with Google Maps transit routing matrices, alongside a mathematical dynamic pricing optimization pipeline linked directly to fleet utilization data.</p>
+                        </div>
+                        <div class="tech-container">
+                            <span class="tech-pill">Flask API</span>
+                            <span class="tech-pill">AWS Bedrock</span>
+                            <span class="tech-pill">Google Maps API</span>
+                            <span class="tech-pill">Multi-Tenancy</span>
+                            <span class="tech-pill">AWS SES</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Mobile Project 2 (Agro-Organic) -->
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3>Agro-Organic Biometric E-Commerce Mobile App</h3>
+                            <span class="project-date">Mobile &amp; Full-Stack Middleware &bull; Apr 2025 – May 2025</span>[cite: 2, 3]
+                            <p>Engineered an organic retail e-commerce mobile solution from scratch, cleanly translating legacy systems to mobile via custom Javascript-injected hybrid WebView session handlers. Configured Firebase analytics logs and native client biometric security authentications[cite: 2, 3].</p>
+                        </div>
+                        <div class="tech-container">
+                            <span class="tech-pill">Flutter</span>
+                            <span class="tech-pill">JavaScript</span>[cite: 2, 3]
+                            <span class="tech-pill">Biometrics</span>[cite: 2, 3]
+                            <span class="tech-pill">Firebase</span>[cite: 2, 3]
+                            <span class="tech-pill">WordPress Bridge</span>[cite: 2, 3]
+                        </div>
+                    </div>
+
+                    <!-- Project 6: Asami 3.0 -->
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3>Graph-Based Enterprise Code Intelligence Suite (Asami 3.0)</h3>
+                            <span class="project-date">AI Infrastructure Accelerator &bull; 6 Months</span>[cite: 1]
+                            <p>Enhanced deep codebase parsing capabilities by structural network modeling using graph database technology[cite: 1]. Deployed a graph analysis system using Azure Cosmos DB (Gremlin API) paired with abstract tree parsing via tree-sitter to break down Python modules into multi-LLM interactive chatbot endpoints[cite: 1].</p>
+                        </div>
+                        <div class="tech-container">
+                            <span class="tech-pill">Azure OpenAI</span>
+                            <span class="tech-pill">Cosmos DB (Gremlin)</span>
+                            <span class="tech-pill">Tree-Sitter</span>
+                            <span class="tech-pill">AWS Bedrock Claude</span>[cite: 1]
+                            <span class="tech-pill">PostgreSQL</span>[cite: 1]
+                        </div>
+                    </div>
+
+                    <!-- Project 7: Breezy Notes -->
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3>Breezy Notes &amp; Team Productivity Workspace</h3>
+                            <span class="project-date">Developer Utilities &bull; Jun 2024 – Jul 2024</span>[cite: 2, 3]
+                            <p>Created an internal team utility module to standardize complex codebase structures. Deployed Room Database logic for accelerated local multi-thread asset persistence while integrating Google Maps API hooks for geographical location-tagging parameters[cite: 2, 3].</p>
+                        </div>
+                        <div class="tech-container">
+                            <span class="tech-pill">Kotlin</span>
+                            <span class="tech-pill">Jetpack Compose</span>
+                            <span class="tech-pill">Room DB</span>[cite: 2, 3]
+                            <span class="tech-pill">Google Maps API</span>[cite: 2, 3]
+                        </div>
+                    </div>
+
+                    <!-- Project 8: Asami 2.1 -->
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3>Asynchronous Prompt Streaming Engine (Asami 2.1)</h3>
+                            <span class="project-date">Internal Product Accelerator &bull; 6 Months</span>[cite: 1]
+                            <p>Designed and built an internal organizational productivity environment optimizing runtime domain context workflows[cite: 1]. Implemented an enterprise-grade RAG ingestion pipeline chunking unstructured data into a MongoDB vector store, backed by an optimized asynchronous response streaming API layer[cite: 1].</p>
+                        </div>
+                        <div class="tech-container">
+                            <span class="tech-pill">Python Flask</span>[cite: 1]
+                            <span class="tech-pill">Azure AKS</span>[cite: 1]
+                            <span class="tech-pill">MongoDB Vector</span>[cite: 1]
+                            <span class="tech-pill">Prompt Tuning</span>[cite: 1]
+                            <span class="tech-pill">Low-Latency Stream</span>[cite: 1]
+                        </div>
+                    </div>
+
+                    <!-- Project 9: Shared UI Library -->
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3>Enterprise Shared UI Library &amp; Test Suite</h3>
+                            <span class="project-date">Shared Libraries &bull; Mar 2024 – Jun 2024</span>[cite: 2, 3]
+                            <p>Constructed a core structural library containing performance-optimized custom component layout frameworks. Maintained high operational stability by writing automated verification suites with Kotlin Mock unit test modules[cite: 2, 3].</p>
+                        </div>
+                        <div class="tech-container">
+                            <span class="tech-pill">Kotlin Native</span>
+                            <span class="tech-pill">Jetpack Compose</span>[cite: 2, 3]
+                            <span class="tech-pill">Kotlin Mock</span>[cite: 2, 3]
+                            <span class="tech-pill">Unit Testing</span>[cite: 2, 3]
+                        </div>
+                    </div>
+
                 </div>
-            </div>
-        </div>
+            </section>
+        </main>
     </div>
 
+    <!-- Premium Futuristic Footer Layout -->
     <footer>
-        <p>Naveenraj | Engineering Graduate (8.7 CGPA)</p>
-        <p style="font-size: 0.8rem; margin-top: 10px;">Built with Mobile Development Standards • 2026</p>
+        <p>Naveenraj &bull; AI Systems &amp; Mobile Full-Stack Architect &bull; 2026</p>
+        <p class="footer-sub">Optimized for horizontal scale, end-to-end telemetry, and polished UI responsiveness.</p>
     </footer>
 
+    <!-- Interactivity Controller Scripts -->
+    <script src="js/main.js"></script>
 </body>
 </html>
